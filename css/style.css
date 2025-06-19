@@ -19,7 +19,7 @@
 }
 
 #board{
-    background-color: #F5F5DC  ;
+    background: linear-gradient(rgb(59, 147, 56) , rgb(219, 219, 93));
     width: 90vmin;
     height: 90vmin;
     max-width: 90vw;
@@ -77,4 +77,38 @@
     .body {
         padding-top: 5vh;
     }
+}
+
+/* Hide controls by default on large screens */
+.controls {
+  display: none;
+}
+
+/* Show controls on screens smaller than 768px (tablets, phones) */
+@media (max-width: 768px) {
+  .controls {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    z-index: 10;
+  }
+
+  .controls button {
+    font-size: 28px;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #ffffffaa;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .controls div {
+    display: flex;
+    gap: 10px;
+  }
 }
